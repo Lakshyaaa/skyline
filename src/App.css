@@ -1,0 +1,99 @@
+/* Full-page centering */
+body, html {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    color: #000000;
+    font-family: 'Poppins', Arial Bold, sans-serif;
+    font-size: 23px; /* Increase base font size */
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+/* Fullscreen video background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensure video covers the entire screen */
+    z-index: -1; /* Place behind content */
+}
+
+/* Center everything */
+.weather-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .weather-container {
+        width: 95%;
+        padding: 15px;
+        border-radius: 30px;
+    }
+}
+
+/* Input and button */
+.input-container {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 15px; /* Increase padding */
+    font-size: 20px; /* Increase font size */
+    width: 280px; /* Adjust width for input */
+    border-radius: 30px;
+    border: 1px solid #ca1313;
+}
+
+
+button {
+    background-color: rgba(0, 0, 0, 0.459);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* Forecast container */
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items */
+    gap: 20px;
+    
+    /* Background and Blur Effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(15px); /* For Safari compatibility */
+
+    /* Border and Shadows */
+    border-radius: 10px; /* Soft rounded edges */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    
+    /* Sizing and Spacing */
+    padding: 10px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* Forecast card */
+
+
+.forecast-card img {
+    width: 110px; /* Adjust size */
+    height: 110px;
+    border-radius: 50%; /* Circular icons */    
+    box-shadow: 0px 10px 15px rgba(12, 4, 251, 0.1);
+    text-align: center;
+}
+
