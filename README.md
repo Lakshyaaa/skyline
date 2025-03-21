@@ -3,6 +3,7 @@
 SkyLine is a smart weather forecasting Web Site using React + Vite. It fetches a 5-day weather forecast from the OpenWeatherMap API and displays temperature, humidity, and weather conditions for the entered city.
 
 Features
+
          - Fetches 5-day weather forecast for any city
          - Displays temperature, humidity, and weather conditions
          - Uses OpenWeatherMap API for weather data
