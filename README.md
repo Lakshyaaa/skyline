@@ -1,12 +1,54 @@
-# React + Vite
+# SkyLine - Smart Weather Forecasting
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SkyLine is a smart weather forecasting Web Site using React + Vite. It fetches a 5-day weather forecast from the OpenWeatherMap API and displays temperature, humidity, and weather conditions for the entered city.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fetches 5-day weather forecast for any city
 
-## Expanding the ESLint configuration
+Displays temperature, humidity, and weather conditions
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Uses OpenWeatherMap API for weather data
+
+Built with React + Vite for fast and efficient performance
+
+Installation & Setup
+
+Prerequisites
+
+Ensure you have Node.js and npm installed.
+
+Clone the Repository
+
+git clone https://github.com/yourusername/skyline-weather.git
+cd skyline-weather
+
+Install Dependencies
+
+npm install
+
+Set Up Environment Variables
+
+Create a .env file in the root directory and add your OpenWeatherMap API key:
+
+VITE_WEATHER_API_KEY=your_api_key_here
+
+Run the Application
+
+npm run dev
+
+Usage
+
+Enter a city name in the input field.
+
+Click the Get Forecast button.
+
+View the 5-day weather forecast, including:
+
+Temperature
+
+Humidity
+
+Weather conditions
+
+Weather icons (if available)
