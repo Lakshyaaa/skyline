@@ -1,7 +1,7 @@
 
 # 🌤️ SkyLine - Smart Weather Forecasting
 
-SkyLine is a smart weather forecasting web application built using **React + Vite**. It fetches a 5-day weather forecast from the **OpenWeatherMap API** and displays detailed weather information including temperature, humidity, and conditions for any entered city.
+SkyLine is a smart weather forecasting Web Site built using **React + Vite**. It fetches a 5-day weather forecast from the **OpenWeatherMap API** and displays detailed weather information including temperature, humidity, and conditions for any entered city.
 
 LIVE: 
 https://skyline-o88n.onrender.com/

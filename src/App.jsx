@@ -1,10 +1,19 @@
-import { useState } from "react";
+/*Lakshya Chandrakar (Mtech - Software Engineering)*/
+import { useState, useEffect} from "react";
 import axios from "axios";
 import "./App.css";
 
 const Weather = () => {
     const [city, setCity] = useState("");
     const [forecast, setForecast] = useState([]);
+    const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date().toLocaleTimeString());
+        }, 1000);
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
 
     const fetchWeather = async () => {
         const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
@@ -19,15 +28,15 @@ const Weather = () => {
         }
     };
 
-    // Function to extract 5-day forecast (one entry per day)
+    // Function to extract 5-day forecast 
     const processForecast = (data) => {
         const dailyData = {};
         data.forEach((entry) => {
-            const date = entry.dt_txt.split(" ")[0]; // Extract YYYY-MM-DD
+            const date = entry.dt_txt.split(" ")[0]; // YYYY-MM-DD
             if (!dailyData[date]) {
                 dailyData[date] = {
                     temp: entry.main.temp,
-                    humidity: entry.main.humidity, // Extract humidity
+                    humidity: entry.main.humidity, //  humidity
                     weather: entry.weather[0].description,
                     icon: entry.weather[0].icon,
                 };
@@ -39,6 +48,7 @@ const Weather = () => {
     return (
         <div className="page-container">
           <div className="weather-container">
+          <div className="time-display">{currentTime}</div>
               <h1>SkyLine - Smart Weather Forecasting</h1>
               <div className="input-container">
                   <input

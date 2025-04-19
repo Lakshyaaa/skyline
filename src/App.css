@@ -13,6 +13,11 @@ body, html {
     text-shadow: 1px 1px 1px rgb(255, 255, 255);
 }
 
+.page-container {
+  position: relative;
+  width: 100%;
+}
+
 /* Fullscreen video background */
 #bg-video {
     position: fixed;
